@@ -1,6 +1,6 @@
 const Usuario = require('../models/UsuarioModel')
 
-// Criação das funcionalidades do usuario
+// Criação das funcionalidades do usuário
 
 exports.criar = (req,res) => {
     const { nome, telefone, email, senha, cpf} = req.body
@@ -9,8 +9,7 @@ exports.criar = (req,res) => {
         if(error){
             res.send(error);
         }
-        res.json(usuario)
-        res.send('Usuário Criado!')
+        res.send('Seu usuário foi criado com sucesso')
     })
 }
 

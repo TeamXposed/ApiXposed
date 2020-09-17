@@ -1,6 +1,6 @@
 const jogos = require('../models/JogoModel')
 
-// Criação das funcionalidades das tarefas
+// Criação das funcionalidades de Jogos
 
 exports.criar = (req,res) => {
     const { nome, tipo, ano, descricao} = req.body

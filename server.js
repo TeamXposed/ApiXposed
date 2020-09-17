@@ -10,9 +10,8 @@ const conection = require('./src/conection/conection');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// Importando as rotas
-const route = require('./src/routes/rotas'); 
-
+// Importando as rotas e jogando no serviço
+const route = require('./src/routes/routes'); 
 route(app);
 
 

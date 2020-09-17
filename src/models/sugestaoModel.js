@@ -14,7 +14,7 @@ const sugestao = new Schema ({
     },
 
     ano: {
-        type: Date,
+        type: String,
         required: 'Campo Obrigatório'
     },
 

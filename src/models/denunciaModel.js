@@ -13,7 +13,7 @@ const denuncia = new Schema ({
         required: 'Campo Obrigatório'
     },
 
-    nick_denuniado: {
+    nick_denunciado: {
         type: String,
         required: 'Campo Obrigatório'
     },
