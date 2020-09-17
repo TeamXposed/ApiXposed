@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const denuncias = new Schema ({
+const denuncia = new Schema ({
     
     nome: {
         type: String,
@@ -34,5 +34,6 @@ const denuncias = new Schema ({
         required: 'Campo Obrigatório'
     },
     */
-  
 })
+
+module.exports = mongoose.model('denuncia', denuncia)

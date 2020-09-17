@@ -29,3 +29,5 @@ const sugestao = new Schema ({
     }
 
 })
+
+module.exports = mongoose.model('sugestao', sugestao)

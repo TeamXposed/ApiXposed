@@ -29,4 +29,6 @@ const usuario = new Schema ({
     }
 })
 
+module.exports = mongoose.model('usuario', usuario)
+
 
