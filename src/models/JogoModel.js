@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const jogo = new Schema ({
+const Jogo = new mongoose.Schema({
     
     nome: {
         type: String,
@@ -14,14 +13,14 @@ const jogo = new Schema ({
     },
 
     ano: {
-        type: Date,
+        type: String,
         required: 'Campo Obrigatório'
     },
 
     descricao: {
         type: String,
         required: 'Campo Obrigatório'
-    },
+    }
 })
 
-module.exports = mongoose.model('jogo', jogo)
+module.exports = mongoose.model('Jogos', Jogo);

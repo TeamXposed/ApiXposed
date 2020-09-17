@@ -4,19 +4,20 @@ app = express(),
 port = process.env.PORT || 3000
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
-const conection = require('./src/conection/conec');
+const conection = require('./src/conection/conection');
   
 //Configuração para pegar o que ser informado via json ou url
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 // Importando as rotas
-const routeusuario = require('./src/routes/denunciaRoute'); 
-routeusuario(app);
+const route = require('./src/routes/rotas'); 
+
+route(app);
 
 
 // Chamando Conexão do MongoAtlas
-conexao();
+conection();
 
 // startando o servidor na porta
 app.listen(port);
