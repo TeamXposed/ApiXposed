@@ -1,16 +1,12 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const usuario = require('../controllers/UsuarioController');
-const jogo = require('../controllers/JogosController');
-const sugestao = require('../controllers/sugestaoController');
-const denuncia = require('../controllers/denunciaController');
-
+const usuario = require('../src/controllers/UsuarioController');
 
 //Realização dos testes
-describe('Só retorna vogal', () =>{
-	it('Descrição do teste aqui', () =>{
-		expect(suafuncao('parametro')).to.equal(retorno);
+describe('Teste de API', () =>{
+	it('Retornar uma mensagem de cadastro criado com sucesso para o usuário caio', () =>{
+		expect(usuario.criar('caio')).to.equal(res.send('Seu usuário foi criado com sucesso'));
 	})
 })
 
