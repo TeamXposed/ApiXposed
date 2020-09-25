@@ -6,78 +6,78 @@ module.exports = function(app) {
   
 	//Jogos
 	//Criação de um jogo
-    app.route('/cadastrarJogos')
+    app.route('/jogo')
 	.post(Jogos.criar);
 
 	//Apresentação da listas de jogos
-	app.route('/listarJogos')
+	app.route('/jogo')
 	.get(Jogos.listar);
 
 	//Apresentação de um jogo
-	app.route('/listarJogosId/:id')
+	app.route('/jogo/:id')
 	.get(Jogos.listarId);
 
 	//Atualização de um jogo
-	app.route('/atualizarJogos/:id')
+	app.route('/jogo/:id')
 	.put(Jogos.atualizar);
 
 	//Exclusão de um jogo
-	app.route('/deletarJogos/:id')
+	app.route('/jogo/:id')
 	.delete(Jogos.deletar);
 
 
 
 	//Usuário
 	//Criação de um usuário
-	app.route('/cadastrarUsuario')
+	app.route('/usuario')
 	.post(Usuario.criar);
 
 	//Apresentação da listas de usuários
-	app.route('/listarUsuario')
+	app.route('/usuario')
 	.get(Usuario.listar)
 
 	//Atualização de um usuário
-	app.route('/atualizarUsuario/:id')
+	app.route('/usuario/:id')
 	.put(Usuario.atualizar);
 
 	//Exclusão de um usuário
-	app.route('/deletarUsuario/:id')
+	app.route('/usuario/:id')
 	.delete(Usuario.deletar);
 
 
 	//Denúncia
 	//Criação de uma denúncia
-	app.route('/cadastrarDenuncia')
+	app.route('/denuncia')
 	.post(Denuncia.criar);
 
 	//Apresentação da listas de denúncias
-	app.route('/listarDenuncia')
+	app.route('/denuncia')
 	.get(Denuncia.listar)
 
 	//Atualização de uma denúncia
-	app.route('/atualizarDenuncia/:id')
+	app.route('/denuncia/:id')
 	.put(Denuncia.atualizar);
 
 	//Exclusão de uma denúncia
-	app.route('/deletarDenuncia/:id')
+	app.route('/denuncia/:id')
 	.delete(Denuncia.deletar);
 
 
 	//Sugestão
     //Criação de uma Sugestão
-    app.route('/cadastrarSugestao')
+    app.route('/sugestao')
     .post(Sugestao.criar);
 
     //Apresentação da listas de Sugestao
-    app.route('/listarSugestao')
+    app.route('/sugestao')
     .get(Sugestao.listar);
 
     //Atualização de uma Sugestao
-    app.route('/atualizarSugestao/:id')
+    app.route('/sugestao/:id')
     .put(Sugestao.atualizar);
 
     //Exclusão de uma Sugestao
-    app.route('/deletarSugestao/:id')
+    app.route('/sugestao/:id')
     .delete(Sugestao.deletar);
 
   };
