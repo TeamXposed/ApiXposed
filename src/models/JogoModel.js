@@ -4,22 +4,26 @@ const Jogo = new mongoose.Schema({
     
     nome: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     tipo: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     ano: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     descricao: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     }
 })
 

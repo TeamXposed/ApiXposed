@@ -5,27 +5,32 @@ const denuncia = new Schema ({
     
     nome: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     assunto: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     nick_denunciado: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     jogo: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     descricao: {
         type: String,
-        required: 'Campo Obrigatório'
+        required: 'Campo Obrigatório',
+        trim: true
     },
 
     /*  ---- Pesquisar sobre anexo ----
