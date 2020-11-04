@@ -22,6 +22,23 @@ exports.listar = function(req,res) {
     })
 }
 
+exports.getEmail = function(req, res) {
+	Usuario.find({email: req.params.email}, function(err, usuario) {
+		if(err)
+			res.send(err)
+		res.json(usuario)
+	})
+}
+
+exports.getSenha = function(req, res) {
+	Usuario.find({senha: req.params.senha}, function(err, usuario) {
+		if(err)
+			res.send(err)
+		res.json(usuario)
+	})
+}
+
+
 exports.atualizar = (req,res) => {
     Usuario.findOneAndUpdate({_id: req.params.id }, req.body,{new: true} ,(error, usuario) =>{
         if(error){
