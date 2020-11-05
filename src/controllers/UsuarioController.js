@@ -22,22 +22,19 @@ exports.listar = function(req,res) {
     })
 }
 
-exports.getEmail = function(req, res) {
-	Usuario.find({email: req.params.email}, function(err, usuario) {
-		if(err)
-			res.send(err)
-		res.json(usuario)
-	})
-}
+exports.getSelect = async(req,res) => {
+    const { email , senha} = req.body
+    const user = await Usuario.findOne({ email, senha });
 
-exports.getSenha = function(req, res) {
-	Usuario.find({senha: req.params.senha}, function(err, usuario) {
-		if(err)
-			res.send(err)
-		res.json(usuario)
-	})
+    const { } = user;
+    
+    return res.json({
+        user:{
+            email,
+            senha
+        }
+    })
 }
-
 
 exports.atualizar = (req,res) => {
     Usuario.findOneAndUpdate({_id: req.params.id }, req.body,{new: true} ,(error, usuario) =>{

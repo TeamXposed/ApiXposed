@@ -43,15 +43,12 @@ module.exports = function (app) {
 	//Exclusão de um usuário
 	app.route('/usuario/:id')
 		.delete(Usuario.deletar);
-	
-	//Pegar email
-	app.route('/usuario/:email')
-		.get(Usuario.getEmail)
 
-	//Pegar senha
-	app.route('/usuario/:senha')
-		.post(Usuario.getSenha)
 
+	app.route('/usuarioselect')
+		.post(Usuario.getSelect);
+
+		
 
 	//Denúncia
 	//Criação de uma denúncia
