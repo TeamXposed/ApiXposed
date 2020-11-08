@@ -22,11 +22,11 @@ exports.listar = function(req,res) {
     })
 }
 
-exports.getSelect = async(req,res) => {
-    const { email , senha} = req.body
-    const user = await Usuario.findOne({ email, senha });
-
-    const { } = user;
+exports.getSelect = async (req,res) => {
+    const { email } = req.body
+    const user = await Usuario.findOne({email});
+    
+    const { senha} = user;
     
     return res.json({
         user:{
