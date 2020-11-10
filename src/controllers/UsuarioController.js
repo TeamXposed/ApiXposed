@@ -23,11 +23,15 @@ exports.listar = function(req,res) {
 }
 
 exports.getSelect = async (req,res) => {
-    const { email } = req.body
+    const { email, senha } = req.body
     const user = await Usuario.findOne({email});
+    console.log(user)
     
-    const { senha} = user;
-    
+    if(senha !== user.senha){
+
+        return res.status(401).send("senha incorreta")
+    }
+
     return res.json({
         user:{
             email,
