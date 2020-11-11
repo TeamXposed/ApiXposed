@@ -2,9 +2,17 @@ const Usuario = require('../models/UsuarioModel')
 
 // Criação das funcionalidades do usuário
 
-exports.criar = (req,res) => {
+exports.criar = async(req,res) => {
     const { nome, telefone, email, senha, cpf} = req.body
+    const usuarioexis = await Usuario.find({email})
+    console.log("Usuario=",usuarioexis)
+    
+    if(usuarioexis.length > 0){
+        return res.status(400).send("Email já cadastrado!")
+    }
+    
     let novoUsuario = new Usuario({ nome, telefone, email, senha, cpf})
+
     novoUsuario.save((error, usuario) =>{
         if(error){
             res.send(error);
