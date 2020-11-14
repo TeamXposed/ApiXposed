@@ -18,6 +18,7 @@ exports.criar = async(req,res) => {
             res.send(error);
         }
         res.send('Seu usuário foi criado com sucesso')
+        console.log("Usuário criado com sucesso")
     })
 }
 

@@ -3,7 +3,7 @@ const Schema = mongoose.Schema;
 
 const denuncia = new Schema ({
     
-    nome: {
+    nome_denunciante: {
         type: String,
         required: 'Campo Obrigatório',
         trim: true
@@ -21,7 +21,7 @@ const denuncia = new Schema ({
         trim: true
     },
 
-    jogo: {
+    nome_jogo: {
         type: String,
         required: 'Campo Obrigatório',
         trim: true
