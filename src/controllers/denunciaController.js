@@ -3,8 +3,8 @@ const denuncia = require('../models/denunciaModel')
 // Criação das funcionalidades de Jogos
 
 exports.criar = (req,res) => {
-    const { nome, assunto, nick_denunciado, jogo, descricao} = req.body
-    let novaDenuncia = new denuncia({ nome, assunto, nick_denunciado, jogo, descricao})
+    const { nome_jogo, assunto, nome_denunciante, nick_denunciado, descricao} = req.body
+    let novaDenuncia = new denuncia({ nome_jogo, assunto, nome_denunciante, nick_denunciado, descricao})
     novaDenuncia.save((error, denuncia) =>{
         if(error){
             res.send(error);
