@@ -33,12 +33,10 @@ const denuncia = new Schema ({
         trim: true
     },
 
-    /*  ---- Pesquisar sobre anexo ----
-        anexo: {
-        type: String,
-        required: 'Campo Obrigatório'
+    cont:{
+        type: Number,
     },
-    */
+
 })
 
 module.exports = mongoose.model('denuncia', denuncia)
